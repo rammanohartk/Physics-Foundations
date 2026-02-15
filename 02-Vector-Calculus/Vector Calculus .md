@@ -89,7 +89,7 @@ Negative divergence → sink (inflow)
 
 Zero divergence → no net creation or destruction
 
-####### note: I still does not understand fully about the aspects of divergence. I am still open to understand more about this and its applications in much detail    
+######  note: I still does not understand fully about the aspects of divergence. I am still open to understand more about this and its applications in much detail    
 
  An example is fluid flow 
  
@@ -107,7 +107,7 @@ Used in:
          continuity equations
          incompressibility constraints
          
-##3. Curl (∇×V)
+## 3.Curl (∇×V)
 
 ### Mathematical Definition:
 
@@ -138,7 +138,7 @@ This implies:
          energy conservation along closed loops
          existence of potential energy
          
-###### I still needs to understand more about how? I only know that there is no local rotation by the field on it, so all work cancels and hence energy is conserved  i.e no energy is created by this rotation. The energy associated with the motion in this field will be conserved. The total mechanical energy of the system is conserved.
+##### I still needs to understand more about how? I only know that there is no local rotation by the field on it, so all work cancels and hence energy is conserved  i.e no energy is created by this rotation. The energy associated with the motion in this field will be conserved. The total mechanical energy of the system is conserved.
 
  zero curl→no energy circulation→conservative field→energy conservation
  
