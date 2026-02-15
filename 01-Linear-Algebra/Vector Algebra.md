@@ -68,8 +68,8 @@ Magnetic and torque-related interactions.
 So from a computational viewpoint:
 
 Dot product → reduces dimensionality (vector → scalar)
-
 Cross product → generates orientation information in space.
+Computationally, the dot product is an efficient tool for checking alignment and overlap (scalar analysis), while the cross product is essential for constructing 3D geometry and defining spatial orientation (vector construction).
 
 ### My Thoughts:
   I initially thought that dot and cross product are just another mathematical formula used for calculations.The physical and geometrical insight really changed my mind on the vector algebra approach on physics and computation. Now I can try to think differently whenever I come across dot and cross products. The type of interaction of any physical quantity can be found if they have a cross or dot product.
