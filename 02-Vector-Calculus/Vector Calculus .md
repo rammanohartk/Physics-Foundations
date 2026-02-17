@@ -3,9 +3,9 @@ Vector calculus describes how scalar and vector fields vary in space.
 
 A field assigns a quantity to every point in space:
 
-         Scalar field → one number at each point (temperature, potential)
+Scalar field → one number at each point (temperature, potential)
          
-         Vector field → magnitude and direction at each point (velocity, force)
+Vector field → magnitude and direction at each point (velocity, force)
          
 The central operator is the Nabla (Del) operator:
 
