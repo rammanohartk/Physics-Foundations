@@ -1,5 +1,5 @@
 
-# .Gradient ($\nabla{f}$)
+# Gradient ($\nabla{f}$)
 
 ## Mathematical Definition:
 
