@@ -3,6 +3,7 @@
 ## Mathematical definition:
 
 A scalar field assigns a scalar value to every point in space
+
 $$
 f : R^3 \rarr R
 $$
@@ -10,6 +11,7 @@ $$
 eg:$ T(x,y,z) = 3 $
 
 A vector field assigns a vector to every point in space
+
 $$
 F : R^3 \rarr R^3
 $$

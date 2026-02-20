@@ -2,7 +2,7 @@
 
 The Laplacian is  the Divergence of the Gradient: $\nabla \cdot (\nabla f)$
 
-The Laplacian of a sclar field $f(x,y,z)$ is defined as 
+The Laplacian of a sclar field $ f(x,y,z) $ is defined as 
 
 $$
 \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} 
@@ -20,9 +20,9 @@ $$
 
 Geometrically, the Laplacian measures the local curvature relative to neighbours i.e, it compares the value at a point to the average of nearby points.
 
-- $\nabla^2 f $ > 0  Point is lower than neighbours (local valley)
-- $\nabla^2 f $ < 0  Point is higher than neigboutrs (local hill)
-- $\nabla^2 f $ = 0 Perfectly balanced with surroundings
+- $ \nabla^2 f $ > 0  Point is lower than neighbours (local valley)
+- $ \nabla^2 f $ < 0  Point is higher than neigboutrs (local hill)
+- $ \nabla^2 f $ = 0 Perfectly balanced with surroundings
 
 In 1D
 - Positive second derivative   -- Curve bends upward
@@ -37,7 +37,7 @@ As the Laplacian measureshow different a point is from its surroundings and if t
 Example : Imagine a thin metal sheet and one small region is hotter than the surroundings, so naturally there will be a heat flow outwards (as there is a local imbalace in temperature). The Laplacian detects this imbalace that drives a heatflow here. 
 
 $$
-Laplacian = local differences from average
+Laplacian = local  differences  from average
 $$
 
 So we can say that the Laplacian measures how far a point is from equilibrium with neighbours  and also the dynamics evolved to remove that imbalace.
