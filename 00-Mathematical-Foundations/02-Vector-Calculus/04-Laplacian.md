@@ -1,6 +1,6 @@
 # The Laplacian ($\nabla^2$)
 
-The Laplacian is  the Divergence of the Gradient: $\nabla \cdot (\nabla f)$
+The Laplacian is  the Divergence of the Gradient: $ \nabla \cdot (\nabla f) $
 
 The Laplacian of a sclar field $ f(x,y,z) $ is defined as 
 
@@ -20,13 +20,13 @@ $$
 
 Geometrically, the Laplacian measures the local curvature relative to neighbours i.e, it compares the value at a point to the average of nearby points.
 
-- $ \nabla^2 f $ > 0  Point is lower than neighbours (local valley)
-- $ \nabla^2 f $ < 0  Point is higher than neigboutrs (local hill)
-- $ \nabla^2 f $ = 0 Perfectly balanced with surroundings
+- $ \nabla^2 f $  > 0  Point is lower than neighbours (local valley)
+- $ \nabla^2 f $  < 0  Point is higher than neigboutrs (local hill)
+- $ \nabla^2 f $  = 0 Perfectly balanced with surroundings
 
 In 1D
-- Positive second derivative   -- Curve bends upward
-- Negative second derivative   -- Curve bends downward
+- Positive second derivative   $ \rightarrow $  Curve bends upward
+- Negative second derivative   $ \rightarrow $  Curve bends downward
 
 So its better to say geometrically, the Laplacian measures how much a field wants to smooth out.
 

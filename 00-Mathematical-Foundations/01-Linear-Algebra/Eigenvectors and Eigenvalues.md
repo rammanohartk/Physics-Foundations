@@ -4,7 +4,7 @@
 
 An eigenvector of a matrix is a special vector that does not change its direction under a linear transformation, ,but can stretch or shrink. 
 
-The scalar value that tells how much the vector shrinks or stretch is eigenvalue($\lambda$).
+The scalar value that tells how much the vector shrinks or stretch is eigenvalue ( $ \lambda $ ).
 
 Mathematically:
 
@@ -12,11 +12,11 @@ $$
 A\vec{v} = \lambda\vec{v}
 $$
 
-The Matrix $A$ acts on vector $\vec{v}$ and the result is just the same vector $\vec{v}$ scaled by a number $\lambda$.
+The Matrix $A$ acts on vector  $ \vec{v} $  and the result is just the same vector  $ \vec{v} $  scaled by a number  $ \lambda $ .
 
 So here,
-- $\vec{v}$ → eigenvector
-- $\lambda$ → eigenvalue
+- $ \vec{v} $  → eigenvector
+- $ \lambda $   → eigenvalue
 
 ## 2,Geometric Interpretation
 
@@ -48,11 +48,11 @@ Eigenvectors helps in decoupling the system to make everything simpler(simple mu
 
 Eigenvalues determine the future of systems. 
 
-If $|\lambda| > 1$: unstable mode (grows to infinity).
+If  $ |\lambda| > 1 $ : unstable mode (grows to infinity).
 
-If $|\lambda| < 1$: Stable (Decays).
+If  $ |\lambda| < 1 $ : Stable (Decays).
 
-If $\lambda = 1$: marginally stable (steady behaviour).
+If  $ |\lambda| = 1 $ : marginally stable (steady behaviour).
 
 Thus, eigenvalues often control stability and long-term behavior.
 
@@ -67,13 +67,14 @@ This frequently appears in wave phenomena and dynamical systems.
 
 ## 5.Determinant and Eigenvalues
 
-Geometrical Insight of eigenvalue made me think of determinant as it is also a scalar value that shows how much a vector stretches or shrinks but in "n-D" space and here eigenvalue is only linear(1-D) that is only in eigenvectors.
+Geometrical Insight of eigenvalue made me think of determinant as it is also a scalar value that shows how much a vector stretches or shrinks but in "n-D" space and here eigenvalue is only linear(1D) that is only in eigenvectors.
 
 The determinant of a matrix equals the product of its eigenvalues:
+
 $$
 det(A)=λ_1 \cdot λ_2 \cdot λ_3
 $$
-	​
+
 This result connects geometric transformation with eigenvalue analysis.
 
 ### Interpretation
@@ -81,12 +82,12 @@ This result connects geometric transformation with eigenvalue analysis.
 Consider a three-dimensional box transformed by a matrix.
 
 The transformation stretches space along its eigenvector directions:
-- length scaled by $λ_1$
-- width scaled by $λ_2$
-- height scaled by $λ_3$
+- length scaled by  $ λ_1 $ 
+- width scaled by  $ λ_2 $
+- height scaled by  $ λ_3 $
 
 The new volume becomes:
-Volume scaling=$λ_1 \cdot  λ_2 \cdot λ_3$,
+Volume scaling= $ λ_1 \cdot  λ_2 \cdot λ_3 $,
 which is exactly the determinant.
 
 So Determinant measures total volume scaling and Eigenvalues describe stretching along independent directions.

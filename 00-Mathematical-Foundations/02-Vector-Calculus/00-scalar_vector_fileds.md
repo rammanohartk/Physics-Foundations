@@ -5,15 +5,15 @@
 A scalar field assigns a scalar value to every point in space
 
 $$
-f : R^3 \rarr R
+f : R^3 \rightarrow R
 $$
 
-eg:$ T(x,y,z) = 3 $
+eg: $ T(x,y,z) = 3 $
 
 A vector field assigns a vector to every point in space
 
 $$
-F : R^3 \rarr R^3
+F : R^3 \rightarrow R^3
 $$
 
 eg: $ F(x,y,z) = (F_x,F_y,F_z)  $

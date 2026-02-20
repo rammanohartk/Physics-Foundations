@@ -7,7 +7,7 @@ It is better to start with the three main types of integrals first.
 ## Line Integral
 
 A line integral measures the circulation or work done along a path.
-For a vector field $ F $ along a curve $ C $,
+For a vector field  $ F $  along a curve  $ C $,
 
 $$
 \int_{C}F \cdot dr
@@ -25,7 +25,7 @@ $$
 ## Volume Integral 
 
 Volume integral measures total quantity inside a volume
-For a region $ V $,
+For a region  $ V $,
 
 $$
 \int_{V} fdV
@@ -34,17 +34,17 @@ $$
 Now we can go to the 3 major theorems.
 All three theorems are special cases of :
 - Integral of a derivative over a region = Integral of the function over its boundary
-- Derivative inside $ \harr $ Quantity on boundary
+- Derivative inside  $ \leftrightarrow $  Quantity on boundary
 - single geometric principle in different dimensions
 
 The dimension progression of these are:
-- Line $ \rarr $ Area
-- Area $ \rarr $ Surface
-- Volume $ \rarr $ Surface
+- Line $ \rightarrow $  Area
+- Area $ \rightarrow $  Surface
+- Volume $ \rightarrow $ Surface
 
 ## 1. Green's Theorem (2D)
 
-For a vector field $ F = (P,Q) $ in a plane,
+For a vector field  $ F = (P,Q) $  in a plane,
 
 $$
 \oint_{C}(Pdx + Qdy) = \int_{A}(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dA
@@ -80,7 +80,7 @@ In Gauss' Theorem
 ## Physical Meaning
 
 Integral theorems explain conservation laws i.e, what leaves a region must reduce whats inside.
-### Line integral $ \rarr $ Work
+### Line integral $ \rightarrow $   Work
 
 $$
 \int_{C}F \cdot dr
@@ -89,7 +89,7 @@ $$
 measures work done by a force field and by Stoke's theorem 
 -if curl = 0, work becomes path independent
 
-### Flux $ \rarr $ Source strength
+### Flux $ \rightarrow $  Source strength
 
 $$
 \int_{S} F \cdot dA
@@ -103,7 +103,7 @@ Used in:
 - fluid flow conservation
 - continuity equations
 
-### Circulation $ \rarr $ Rotation
+### Circulation $ \rightarrow $  Rotation
 
 Stokes theorem explains
 - if curl is nonzero, there mmust be ciculation along boundary.

@@ -15,7 +15,7 @@ where:
 A → matrix (operator)
 x⃗ → input vector
 b⃗→ transformed vector
-A Matrix $A$ acts on vector $\vec{x}$ to produce a new vector $\vec{b}$
+A Matrix  $ A $  acts on vector  $ \vec{x} $  to produce a new vector  $ \vec{b} $ 
 
 Geometrically, a matrix can be operated to :
 - stretch
@@ -86,7 +86,7 @@ $$
 I = \begin{bmatrix}1 & 0 \\\ 0 & 1\end{bmatrix}
 $$
 
-Applying $I$ leaves vectors unchanged.
+Applying  $ I $  leaves vectors unchanged.
 
 ## 4.Matrices as System operators:
 
@@ -107,13 +107,9 @@ This compactly represents systems of simultaneous equations.
 Matrices play an important role in computational calculations as they are effectively used to describe large systems and also in many other certain applications like :
 
 - solving linear systems
-
 - numerical simulation
-
 - eigenvalue problems
-
 - discretized differential equations
-
 - finite element and finite difference methods
 
 ## My thoughts:

@@ -10,6 +10,7 @@ $$
 $$
 
 In 2D, the standard basis are:
+
 $$
 \hat{i} = (1,0), \hat{j} = (0,1)
 $$
@@ -29,7 +30,7 @@ $$
 \vec{v'} = P^{-1}\vec{v}
 $$
 
-where $P$ contains new basis vectors.
+where $ P $ contains new basis vectors.
 
 ### Geometric Insight:
 

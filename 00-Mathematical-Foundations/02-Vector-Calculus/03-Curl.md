@@ -34,6 +34,7 @@ This implies:
 zero curl→no energy circulation→conservative field→energy conservation
  
 ## Important note: 
+
 - A field may appear curved yet have zero curl.
 - Curl measures local rotational tendency, not visual curvature.
 

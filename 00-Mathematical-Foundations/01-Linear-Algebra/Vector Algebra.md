@@ -48,7 +48,6 @@ This helps us in  giving  an intuitive way to visualize alignment.
 The dot product measures how one vector boosts other. If perfectly aligned 100% of A helps B and 0% if they are perpendicular i.e,
 
 - Perfect alignment → maximum contribution
-    
 - Perpendicular vectors → zero contribution
     
 Thus, the dot product measures how efficiently one vector acts along another.
@@ -62,7 +61,7 @@ $$
 A \times B=∣A∣∣B∣sin\theta\hat{n}
 $$       
 
-where $\hat{n}$ is a unit vector perpendicular to the plane containing $A$ and $B$.
+where  $ \hat{n} $  is a unit vector perpendicular to the plane containing  $ A $  and  $ B $ .
 
 ### Direction:
 
@@ -85,11 +84,12 @@ Geometrically the magnitude of cross product equals to the area of parallelogram
 The cross product  appears whenever a rotation is involved.
 Examples:
 - Torque 
+
 $$  
 \tau = r \times F
+
 $$             
 - Angular momentum
-    
 - Magnetic force          
     
 The cross product creates a new vector representing the axis of rotation.

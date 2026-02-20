@@ -24,7 +24,7 @@ The larger its magnitude, the steeper the slope.
 If U is potential energy:
 
 $$
- \vec{F} = − \nabla{U}
+\vec{F} = − \nabla{U}
 $$  
 
 Physical forces act in the opposite direction of gradient, as the systems needs to drive towards lower energy for stability.

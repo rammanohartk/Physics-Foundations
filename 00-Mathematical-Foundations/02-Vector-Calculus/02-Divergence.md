@@ -27,6 +27,7 @@ The common interpretation can be as :
 
 An example is fluid flow 
 If
+
 $$ 
 \nabla \cdot \vec{V} = 0
 $$

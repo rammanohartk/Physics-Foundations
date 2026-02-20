@@ -47,7 +47,7 @@ $$
 v = v_1x + v_2y + v_3z
 $$ 
 
-The $v_i$ are components of a vector.
+The  $ v_i $  are components of a vector.
    
 The components depends on the chose of basis, but geometric vector does not.
    
