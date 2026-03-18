@@ -1,5 +1,12 @@
 # Ordinary Differential Equation
 
+An equation containing derivatives is called a diﬀerential equation. If it contains partial derivatives, it is called a partial diﬀerential equation; otherwise it is called an ordinary diﬀerential equation.
+
+Any mechanics problem in which we want to describe the motion of a body (automobile, electron, or satellite) under the action of a given force, involves the
+solution of a diﬀerential equation or a set of diﬀerential equations.
+
+A solution of a diﬀerential equation (in the variables x and y) is a relation between x and y which, if substituted into the diﬀerential equation, gives an identity.
+
 ## Mathematical Definition
 An Ordinary Differential Equation (ODE) can be written generally as:
 

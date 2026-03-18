@@ -252,6 +252,6 @@ $$
 - RLC circuits obey the same equation structure.
 - Continuous limit of coupled oscillators → wave equation.
 
-## My thought
+##  My thoughts
 
 Second order ODEs are like mathematical laguage for oscillations. Here there is inertia and restoring force present hence there will be swingin,vibrating,resonating etc. I can now say that a first order relaxes system and second order oscillates the system
