@@ -15,9 +15,9 @@ It produces:
 - Eigenvalues λ (allowed values)
 - Eigenfunctions y(x) (corresponding solutions)
 
-This is the continuous analogue of:
+This is the continuous analogue of
 
-⃗$$
+$$
 A\vec{v} = λ\vec{v}
 $$
 
@@ -74,6 +74,7 @@ appear, the equation has a singular point.
 A normal series fails.
 
 Now Frobenius method allows:
+
 $$
 x^{n+r}
 $$
