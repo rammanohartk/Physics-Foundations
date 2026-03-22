@@ -1,12 +1,14 @@
 # Integral Theorems
 
-Vector Calculus contains three main fundemental integral theorems that connect local differential operators to global integral boundaries.
+Vector calculus contains fundamental integral theorems that connect local differential behavior to global integral quantities over regions and their boundaries.
 
-It is better to start with the three main types of integrals first.
+They express a deep principle:
+Local derivatives inside a region ↔ Global behavior on the boundary
+
 
 ## Line Integral
+A line integral measures work or circulation along a curve C:
 
-A line integral measures the circulation or work done along a path.
 For a vector field  $ F $  along a curve  $ C $,
 
 $$
@@ -14,8 +16,7 @@ $$
 $$
 
 ## Surface Integral
-
-A surface integral measures total flow(flux) through a surface
+A surface integral measures flux through a surface S:
 For a surface $S$,
 
 $$
@@ -24,7 +25,8 @@ $$
 
 ## Volume Integral 
 
-Volume integral measures total quantity inside a volume
+A volume integral measures total quantity inside a region V:
+
 For a region  $ V $,
 
 $$
@@ -32,93 +34,111 @@ $$
 $$
 
 Now we can go to the 3 major theorems.
-All three theorems are special cases of :
-- Integral of a derivative over a region = Integral of the function over its boundary
-- Derivative inside  $ \leftrightarrow $  Quantity on boundary
-- single geometric principle in different dimensions
 
-The dimension progression of these are:
-- Line $ \rightarrow $  Area
-- Area $ \rightarrow $  Surface
-- Volume $ \rightarrow $ Surface
+### Unifying Principle
+
+All integral theorems follow a common structure:
+Integral of a derivative over a region = Integral of the field over the boundary
+This reflects a single geometric principle across dimensions.
+
+### Dimensional Progression
+
+- 1D → 2D (Line → Area)  → Green’s Theorem  
+- 2D → 3D (Surface → Boundary Curve) → Stokes’ Theorem  
+- 3D → 2D (Volume → Surface) → Gauss’ Theorem
 
 ## 1. Green's Theorem (2D)
 
 For a vector field  $ F = (P,Q) $  in a plane,
 
 $$
-\oint_{C}(Pdx + Qdy) = \int_{A}(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dA
+∮_C (P dx + Q dy) = ∬_A (∂Q/∂x − ∂P/∂y) dA
 $$
 
+This relates circulation along a closed curve to the curl within the enclosed area.
 The circulation around boundary is total curl inside the region.(Stokes theorem in 2D)
 
 ## 2. Stoke's Theorem(3D)
 
 The circulation along boundary curve is surface integral of curl(Curl theorem)
+
 $$
-\int_{S}(\nabla \times F) \cdot A = \oint_{\partial S} F \cdot dr
+∬_S (∇ × F) · dA = ∮_{∂S} F · dr
 $$ 
+
+This relates the circulation along a boundary curve to the curl over the surface.
 
 ## 3. Gauss' Divergence Theorem
 
 The volume integral of divergence is the flux through boundary surface(divergence theorem)
 
 $$
-\int_{V}(\nabla \cdot F)dV = \oint_{\partial V}F \cdot dA
+∭_V (∇ · F) dV = ∬_{∂V} F · dA
 $$
 
-## Geometric Interpretaion
+This relates the divergence within a volume to the flux through its boundary surface.
 
-The main idea is that the interior behavior is encoded in the boundary.
-In Green's Theorem 
-- total microscopic rotation inside are = circulation along edge
-In Stoke's Theorem
-- total rotation over surface = boundary circulation
-In Gauss' Theorem
-- total volume expansion = net outward flow
+
+## Geometric Interpretation
+
+These theorems show that interior behavior is encoded at the boundary:
+- Green’s Theorem → total rotation inside = circulation along boundary  
+- Stokes’ Theorem → surface rotation = boundary circulation  
+- Gauss’ Theorem → total expansion inside = net outward flux
+
 
 ## Physical Meaning
 
-Integral theorems explain conservation laws i.e, what leaves a region must reduce whats inside.
-### Line integral $ \rightarrow $   Work
+Integral theorems underpin conservation laws.
+
+They express that:
+
+What leaves a region must be accounted for by what happens inside.
+
+### Work (Line Integral)
 
 $$
-\int_{C}F \cdot dr
+∫_C F · dr
 $$
 
-measures work done by a force field and by Stoke's theorem 
--if curl = 0, work becomes path independent
+Measures work done by a force field.
 
-### Flux $ \rightarrow $  Source strength
+If curl = 0 (conservative field), work is path independent.
+
+---
+
+### Flux (Surface Integral)
 
 $$
-\int_{S} F \cdot dA
+∫_S F · dA
 $$
 
-measures total flow through surface and Gauss' theorem explains why
-- if divergence is positive inside, there must be outword flux
+Measures total flow through a surface.
 
-Used in:
-- Gauss's law
-- fluid flow conservation
-- continuity equations
+Gauss’ theorem explains:
+Positive divergence inside → net outward flux
 
-### Circulation $ \rightarrow $  Rotation
+---
 
-Stokes theorem explains
-- if curl is nonzero, there mmust be ciculation along boundary.
+### Circulation (Line Integral)
+Stokes’ theorem shows:
 
-Used in:
-- Maxwell's equations
-- electromagnetic induction
+Nonzero curl → circulation along boundary
 
-## Computational Uses
+Applications:
+- Electromagnetism
+- Fluid rotation
 
-Integral theorems are the bcakbone of numerical physics and some examples are 
-- finite volume methods
-- fnite element methods
-- ensure conservation laws
+## Computational Usage
+
+Integral theorems form the backbone of numerical physics:
+
+- Finite Volume Methods (FVM)
+- Finite Element Methods (FEM)
+- Enforcing conservation laws
+
+They allow local differential equations to be solved using global integral formulations, which are more stable numerically.
 
 ## My thoughts
 
-Integral theorems can be considered as a geometry based physics as it talks about how local physics creates global physical effects like divergence creates flux and curl creates ciculation.
+Integral theorems can be considered as a geometry based physics as it talks about how local physics creates global physical effects like divergence creates flux and curl creates ciculation. This connection between local behavior and global outcomes is central to both theoretical understanding and computational modeling.

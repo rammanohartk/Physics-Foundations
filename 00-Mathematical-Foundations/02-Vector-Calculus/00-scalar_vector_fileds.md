@@ -2,55 +2,75 @@
 
 ## Mathematical definition:
 
-A scalar field assigns a scalar value to every point in space
+A scalar field is a function that assigns a scalar value to each point in space:
 
-$$
-f : R^3 \rightarrow R
-$$
+f : ℝ³ → ℝ
 
-eg: $ T(x,y,z) = 3 $
+Example:
+f(x, y, z) = T(x, y, z)
 
-A vector field assigns a vector to every point in space
+A vector field assigns a vector to each point in space:
 
-$$
-F : R^3 \rightarrow R^3
-$$
+F : ℝ³ → ℝ³
 
-eg: $ F(x,y,z) = (F_x,F_y,F_z)  $
+Example:
+F(x, y, z) = (Fₓ(x,y,z), Fᵧ(x,y,z), F_z(x,y,z))
 
 ## Geometric Interpretation:
 
-Scalar field:
-- each point has only magnitude (like height on a landscape)
-- no direction
+### Scalar Field
+Each point in space is assigned a single value.
 
-Vector Field:
-- each point has magnitude and direction(arrows attched to everypoints)
-- direction everywhere
+This can be visualized as:
+- height on a landscape
+- contour maps
+
+### Vector Field
+Each point in space is assigned a vector.
+
+This can be visualized as:
+- arrows attached to each point
+- representing both magnitude and direction
+
 
 ## Physical Meaning 
 
-### Scalar Field 
+### Scalar Fields
+Scalar fields describe physical quantities without direction.
 
-Scalar field describes state.
-
-It represents quantities without direction
-- temperature field
-- electric potential
-- pressure
-- density
+Examples:
+- Temperature field
+- Electric potential
+- Pressure
+- Density
 
 ### Vector Fields
+Vector fields describe directional physical quantities such as flow or force.
 
-Vector field describes flow or force
- 
-It represents directional quantities
-- electric field
-- magnetic field
-- force field
-- heat flux
+Examples:
+- Electric field
+- Magnetic field
+- Force field
+- Heat flux
+
+Fields may depend on both space and time:
+
+f(x, y, z, t),   F(x, y, z, t)
+
+This allows fields to describe dynamic physical systems.
+
+## Computational Perspective
+
+In numerical simulations, fields are represented on discrete grids:
+
+- Scalar fields → arrays of values at grid points
+- Vector fields → arrays of vectors at grid points
+
+This discretization allows differential operators (gradient, divergence, curl) to be approximated numerically.
+
+Many physical simulations (fluid flow, electromagnetism) are based on evolving scalar and vector fields over time.
 
 ## My thoughts:
 
-Vector calculus is all about fields. Fields can be considered as the language of physics. Fields describe the true structure of space. We can convert between these two fields using operators and fields are very important to understand before we talk about operators.
+Vector calculus is fundamentaly the study of fields. Fields can be considered as the language of physics for describing how physical quantities are distributed in space and time. We can convert between these two fields using operators and fields are very important to understand before we talk about operators.
 
