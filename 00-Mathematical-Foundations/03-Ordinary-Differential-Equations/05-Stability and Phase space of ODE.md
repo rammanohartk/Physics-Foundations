@@ -1,70 +1,89 @@
 # Stability and Phase Space of ODE
 
-## Mathematical Definition
+## Phase Space
 
-A phase space is the set of all possible states of a system.
+Phase space is the set of all possible states of a system.
 
-For a first-order system:
+For an autonomous system:
 
-$$
-\frac{dx}{dt} = f(x)
-$$
+dx/dt = f(x)
+
 each point x represents a complete state of the system.
 
-The function f(x) defines a vector field, which assigns a direction of motion at every point in phase space.
+The function f(x) defines a vector field that assigns a direction of motion at every point.
 
-A fixed point is defined by:
+### Fixed Points
 
-$$
-f(x)=0
-$$
+A fixed point (equilibrium point) satisfies:
 
-where the system does not evolve.
+f(x) = 0
+
+At this point, the system does not evolve.
 
 ## Geometric Interpretation
 
-Phase space is a geometric picture of dynamics.
-- Each point = a state of the system
-- Each arrow = direction of evolution
-- A solution = a trajectory (curve)
+Phase space provides a geometric view of dynamics:
 
-Instead of solving for x(t), we visualize how states flow.
+- Each point → a state of the system  
+- Each arrow → direction of evolution (vector field)  
+- A solution → a trajectory through phase space  
 
-Key geometric ideas:
-- Fixed Points: locations where motion stops
-- Trajectories: paths followed over time
-- Flow Field: the full collection of arrows
+Instead of solving x(t), we visualize how all possible states evolve.
+
+### Key Geometric Objects
+
+- Fixed points → where motion stops  
+- Trajectories → paths followed over time  
+- Flow field → the full vector field describing motion  
 
 ## Physical Meaning
 
-Phase space represents the complete physical state of a system, like,
-- Position + velocity fully describe a particle
+Phase space represents the complete physical state of a system.
 
-The ODE defines how this state changes.
-So instead of tracking one solution, phase space shows all possible behaviors at once.
+Examples:
+- A particle → (position, velocity)  
+- A circuit → (charge, current)  
 
-Types of physical behavior:
-- Stable (Attractor): system moves toward equilibrium
-- Unstable (Repeller): system moves away from equilibrium
+The ODE defines how the state evolves in time.
+Phase space shows all possible behaviors of the system, not just a single solution.
+
+## Stability of Fixed Points
+
+Behavior near fixed points determines system stability:
+
+- Stable (Attractor): nearby trajectories move toward the point  
+- Unstable (Repeller): nearby trajectories move away  
+- Saddle Point: stable in some directions, unstable in others  
+
+
+Stability is often determined by linearizing the system near the fixed point and analyzing eigenvalues of the Jacobian matrix.
+
 
 ## Computational Perspective
 
 Phase space is used to analyze simulations.
-- Numerical solvers generate trajectories step-by-step
-- Behavior of trajectories reveals:
-     - Stability
-     - Long-term evolution
+Numerical solvers generate trajectories in phase space step by step.
 
-Important properties:
-- Trajectories do not cross (deterministic systems)
-- Used to study:
-     - Stability of solutions
-     - Sensitivity to initial conditions
+By analyzing these trajectories, we can study:
+- Stability
+- Long-term behavior
+- Sensitivity to initial conditions
 
-Nonlinear systems may show:
-- Limit cycles: closed trajectories (sustained oscillations)
-- Chaotic behavior: small changes → large differences
+## Key Properties
+
+- Trajectories do not cross in deterministic systems  
+- The future evolution is uniquely determined by the current state  
+
+## Nonlinear Dynamics
+
+Nonlinear systems can exhibit:
+
+- Limit cycles → closed trajectories (sustained oscillations)  
+- Bifurcations → qualitative change in behavior  
+- Chaos → extreme sensitivity to initial conditions  
+
 
 ## My thoughts
-I think its better to understand Phase space as it  is the space of all possible system states and an ODE defines motion as a vector field in this space.
+
+I think its better to understand Phase space as it  is the space of all possible system states.Phase space provides a powerful way to understand dynamical systems and an ODE defines motion as a vector field in this space. So this perspective allows us to study global behavior, stability, and long-term evolution without solving the equation explicitly.
 

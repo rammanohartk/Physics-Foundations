@@ -13,7 +13,7 @@ The highest derivative present is the first derivative.
 ### Special important case (linear first-order):
 
 $$
-\frac{dy}{dt} + p(t)y = g(t)
+\frac{dy}{dt} + p(t) y = g(t)
 $$
 
 If g(t)=0, the equation is homogeneous.
@@ -22,13 +22,15 @@ If g(t)=0, the equation is homogeneous.
 
 A first-order ODE defines a slope field.
 
-At every point (t,y), the equation assigns a slope:
+At each point (t, y), the equation assigns a slope dy/dt.
 
-$$
-\frac{dy}{dt}
-$$
+The solution is a curve whose tangent matches this slope at every point.
 
-The solution is a curve whose tangent at each point matches this slope.
+For non-autonomous systems:
+- The system evolves in (t, y) space
+
+For autonomous systems (dy/dt = f(y)):
+- The system can be visualized on a one-dimensional phase line
 
 So geometrically:
 - The system moves along a one-dimensional trajectory.
@@ -38,95 +40,77 @@ So geometrically:
 
 ## Physical Meaning
 
-Here we can say that a first-order equation describes a memoryless system.
+A first-order ODE describes systems where the rate of change depends only on the current state and time:
 
-The rate of change at any moment depends only on:
-- The current state
-- The current time
+dy/dt = f(t, y)
 
-There is no inertia.
-So if you remove the driving force, the system does not coast, it immediately stops evolving (or strictly decays).
+Such systems do not explicitly include higher-order effects like acceleration.
+
+They often model relaxation, growth, or decay processes.
+
+The absence of higher derivatives means that the system does not explicitly model inertia or momentum effects.
 
 ### Physical Examples
 
-- Radioactive Decay
-
-$$
-\frac{dN}{dt} = - \lambda N
-$$
-
+#### Radioactive Decay
+dN/dt = −λN
 Decay rate depends only on current amount.
+---
 
-- RC Circuit (Capacitor Discharge)
-
-$$
-\frac{dQ}{dt} = - \frac{1}{RC} Q
-$$
-
+#### RC Circuit (Discharge)
+dQ/dt = −(1/RC) Q
 Charge decreases exponentially.
+---
 
-- Newton’s Law of Cooling
-
-$$
-\frac{dT}{dt} = -k(T - T_env)
-$$
-
+#### Newton’s Law of Cooling
+dT/dt = −k (T − T_env)
 Temperature approaches equilibrium exponentially.
 
-### Physical Property
+### Physical Properties
 
-First-order systems:
-- Cannot overshoot equilibrium.
-- Cannot oscillate.
-- Approach equilibrium monotonically.
+For simple first-order systems:
 
+- Typically approach equilibrium monotonically
+- Do not exhibit oscillations on their own
+
+Oscillatory behavior generally requires at least second-order dynamics or coupling between variables.
 (Why? - Because there is no second derivative (no inertia). They lack stored kinetic energy.)
 
 ## Solution Methods
 
 ### 1.Separation of Variables
 
-If the equation can be written as:
+If:
 
-$$
-\frac{dy}{dt} = g(t)h(y)
-$$	​
+dy/dt = g(t) h(y)
 
-We can separate variables as
+Then:
 
-$$
-\frac{1}{h(y)} dy = g(t)dt
-$$	​
+dy/h(y) = g(t) dt
 
-Then we can integrate both sides to get solution
+Integrating both sides yields the solution.
 
-Ths process can be interpreted as :
-- We separate cause and response, then accumulate (integrate).
+This process can be interpreted as :
+- This method separates dependence on variables and accumulates their effects through integration.
 
 ### 2.Integrating Factor (Linear Case)
 
-Here for the case,
+For:
 
-$$
-\frac{dy}{dt} + p(t)y = g(t)
-$$
+dy/dt + p(t) y = g(t)
 
-We multiply by integrating factor:
+Multiply by integrating factor:
 
-$$
-\mu(t) = e ^{\int p(t)dt} 
-$$
+μ(t) = e^{∫ p(t) dt}
 
-This  will help transform the left-hand side into a total derivative:
+This gives:
 
-$$
-\frac{d}{dt}(\mu y) = \mu g(t)
-$$
+d/dt (μy) = μ g(t)
 
-We can integrate this directly.
+which can be integrated directly.
 
 This process can be interpreted as:
-- The integrating factor can be a tool that can  compensate for “leakage” in the system.
+- The integrating factor compensates for the varying coefficient, transforming the equation into an exact derivative.
 
 ## Computational Perspective
 
@@ -135,16 +119,14 @@ First-order ODEs are straightforward to simulate numerically.
 Common methods:
 - Euler method
 - Runge–Kutta methods
--Adaptive solvers
+- Adaptive solvers
 
-As there is no velocity variable involved only one initial condition is required (as order is 1)
 Only one initial condition is required:
 
-$$
-y(t_0) = y_0
-​$$
+y(t₀) = y₀
+
 So computationally,
-- They are stable and predictable unless nonlinearities create sharp gradients.
+- Their simplicity often leads to stable numerical behavior, though nonlinear systems may still present challenges.
 
 ## My thoughts
 

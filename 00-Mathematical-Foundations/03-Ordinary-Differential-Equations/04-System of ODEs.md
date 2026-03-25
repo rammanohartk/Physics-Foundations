@@ -1,182 +1,164 @@
-# Systems of ODEs
+# Systems of Ordinary Differential Equations
 
-## Definition 
+A system of ordinary differential equations (ODEs) is a collection of differential equations that describes the simultaneous evolution of multiple variables.
 
-A system of ordinary differential equations (ODEs) is a collection of differential equations that describe the simultaneous time evolution of multiple unknown functions.
+Instead of a single function, we solve for a state vector:
 
-Instead of solving for a single function x(t), we solve for a vector of functions.
+x(t) = [x₁(t), x₂(t), ..., xₙ(t)]ᵀ
 
-$$
-x(t) = \begin{bmatrix}
-x_1(t) \\ x_2(t) \\ . \\ . \\ x_n(t)
-\end{bmatrix}
-$$
+A general first-order system is:
 
-A general first-order system has the form:
-
-$$
-\frac{dx}{dt} = f(t,x)
-$$
+dx/dt = f(t, x)
 
 where:
-
-$$
-x(t)∈R^n
-$$
-- x(t)is called the state vector
+- x(t) ∈ ℝⁿ is the state vector
 - f defines the evolution rule
 
-The Systems arise whenever:
+## When Do Systems Arise?
+
+Systems of ODEs appear when:
+
 - Multiple degrees of freedom interact
-- The rate of change of one variable depends on others
-- Higher-order equations are rewritten as first order
+- Variables depend on each other (rate)
+- Higher-order ODEs are rewritten as first-order systems
 - PDEs are discretized in space (Method of Lines)
 
-A system of ODEs can be classified as:
+## Classification
+
+A system of ODEs can be:
+
 - Linear
 - Nonlinear
 
-If the system is linear, it can further be classified as:
-- Homogenous(no forcing term)
-- Nonhommogenous(with forcing term}
+Linear systems can further be:
+
+- Homogeneous (no forcing term)
+- Nonhomogeneous (with forcing)
+
 
 ### Examples 
 
 The system evolves as a collective object in state space.
 Examples include:
-- Coupled oscillators
-- Lattice vibrations
-- Electrical circuits
-- Predator–prey models
-- Discretized wave equations
+- Coupled oscillators  
+- Lattice vibrations  
+- Electrical circuits  
+- Predator–prey models  
+- Discretized wave equations  
+
 
 ## Linear Systems of ODEs
 
-A system is called linear if the evolution rule depends linearly on the state:
+A linear system has the form:
 
-$$
-\frac{dx}{dt} = Ax
-$$
+dx/dt = A x
 
-where:
-A is a constant matrix
+where A is a constant matrix.
 
-Linear systems are central because:
+These systems are central because:
 - They describe small oscillations
-- They appear after linearization of nonlinear systems
-- They govern quantum time evolution
-- They arise after spatial discretization of linear PDEs
+- They arise from linearization of nonlinear systems
+- They appear in quantum and classical dynamics
+- They result from discretizing PDEs
 
 ### Homogeneous Linear Systems
 
 A linear system is called homogeneous if:
 
-$$
-\frac{dx}{dt} = Ax
-$$
+dx/dt = A x
 
-It is called homogeneous because:
-- The right-hand side contains only the state vector
-- If x=0, then x′=0
-- There is no external input
+Properties:
+- No external input
+- x = 0 is an equilibrium solution
+- Represents a closed system
 
-This represents a closed system.
-#### Solution 
+### Solution
 
 The exact solution is:
 
-$$
-x(t) = e^{At} x_0
-$$
+x(t) = e^{At} x₀
+
+where e^{At} is the matrix exponential.
 
 If A is diagonalizable:
 
-$$
-A = PDP^{-1}
-$$
+A = P D P^{-1}
 
 Then:
 
-$$
-e^{At} = Pe^{Dt}P^{−1}
-$$
+e^{At} = P e^{Dt} P^{-1}
 
-The eigenvalues determines the  behavior:
-- Re(λ) < 0 → decay
-- Re(λ) > 0 → growth
+### Eigenvalue Interpretation
+
+Eigenvalues determine system behavior:
+
+- Re(λ) < 0 → decay (stable)
+- Re(λ) > 0 → growth (unstable)
 - Imaginary λ → oscillation
 
-#### Phase Space Interpretation
-- The system defines a flow in R^n 
-- Eigenvectors define invariant directions
-- Long-time behavior is governed by dominant eigenvalues
+Eigenvectors define invariant directions in state space.
 
-### Nonhomogeneous Linear Systems (Driven Systems)
+#### Phase Space Interpretation
+
+- The system defines a flow in ℝⁿ
+- Trajectories evolve in state space
+- Long-term behavior is governed by dominant eigenvalues
+
+### Nonhomogeneous Linear Systems
+
 
 A linear system becomes nonhomogeneous when an additional forcing term is present:
-
-​$$
-
-\frac{dx}{dt} = Ax +b(t)
-
-$$
-
+dx/dt = A x + b(t)
 
 where:
-- A describes internal interactions
-- b(t) is an external input
+- A → internal dynamics
+- b(t) → external forcing
 
-It is called nonhomogeneous because:
-- Even if x = 0, the derivative may not be zero
-- The system is influenced externally
+Properties:
+- Even if x = 0, dx/dt may not be zero
+- System is driven by external input
 
-We can say that a Homogeneous systems are a special case where: 
 
-$$
-$$
-b (t) = 0
-$$
-#### Physical Meaning 
-- Driven Systems
+#### Solution (Driven System)
 
-Examples:
+The general solution is:
 
-- Forced pendulum
-- Circuit with voltage source
-- Mass under external force
-- Particle in external electric field
-- Real systems are almost always nonhomogeneous.
-
-#### Solution
-
-As the system is linear:
-
-$$
 x(t) = x_h(t) + x_p(t)
-$$
 
-- x_h transient (homogeneous solution)
-- x_p forced response
+where:
+- x_h → homogeneous (transient)
+- x_p → particular (forced response)
 
-General formula:
+Exact solution:
 
-$$
-x(t)= e^{At}x0+\int_0^t{e^{A(t−s)}b(s)ds}
-$$
+x(t) = e^{At} x₀ + ∫₀^t e^{A(t−s)} b(s) ds
 
-This tells us that 
-- Internal dynamics propagate via matrix exponential
-- Forcing accumulates over time
-- The system has memory of past inputs
+This shows:
 
-### Computational Physics Perspective
+- Internal dynamics propagate via e^{At}
+- External forcing accumulates over time
+- The system retains memory of past inputs
 
-A system of ODE is mathematical model for  time evolving coupled variables.
-Here we can turn physics into state vector and simulate how system evolves with time.
+
+## Computational Physics Perspective
+
+Systems of ODEs provide a natural framework for simulating coupled physical systems.
+
+Physics is converted into:
+- A state vector (system variables)
+- An evolution rule (dynamics)
+
+Numerical integration then evolves the system in time.
+
+This framework underlies:
+- Molecular dynamics
+- Circuit simulation
+- Multiphysics models
+- Discretized PDE solvers
 
 ## My thoughts
 
 As most of the physics variables are coupled it is necessery to understand system of ODEs as they can make simple computational works for coupled dynamics.
-
+They can  provide a bridge between mathematical theory and computational simulation, allowing complex coupled behavior to be studied systematically.
 
 
